@@ -1,0 +1,55 @@
+{
+  "name": "commitcheck",
+  "version": "1.0.0",
+  "description": "Lint commit messages against Conventional Commits: CLI, commit-msg hook and CI range checks. Zero dependencies.",
+  "license": "MIT",
+  "author": "Yosef Ehrenfeld",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yossiehrenfeld/commitcheck.git"
+  },
+  "keywords": [
+    "conventional-commits",
+    "commit",
+    "commitlint",
+    "git",
+    "lint",
+    "commit-msg",
+    "hook",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^20.0.0"
+  },
+  "bin": {
+    "commitcheck": "./dist/cli.js"
+  },
+  "homepage": "https://github.com/Yossiehrenfeld/commitcheck#readme",
+  "bugs": {
+    "url": "https://github.com/Yossiehrenfeld/commitcheck/issues"
+  }
+}
